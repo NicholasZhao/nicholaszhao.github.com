@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>致丁烨</title>
+
+    <link href="stylesheets/common.css" type="text/css" rel="stylesheet">
+    <link href="stylesheets/love.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/garden.js"></script>
+    <script type="text/javascript" src="javascripts/love-functions.js"></script>
+    <script type="text/javascript" src="javascripts/common.js"></script>
+
+</head>
+
+<body>
+
+
+</body>
+</html>
+
+<div id="mainDiv">
+    <div id="content" style="width: 1110px; height: 625px; top: 10px; left: 119.5px; ">
+
+
+        <div id="loveHeart">
+            <canvas id="garden" width="670" height="625"></canvas>
+            <div id="words" style="position: absolute; top: 195px; left: 50px; ">
+                <div id="messages" style="display: block; ">Mandy, I have fallen in love with you for
+                    <div id="elapseClock"><span class="digit">190</span> days <span class="digit">16</span> hours <span class="digit">55</span> minutes <span class="digit">04</span> seconds</div>
+                </div>
+                <div id="loveu" style="display: block; ">
+                    <br>
+                    <div class="signature">- Nicholas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var offsetX = $("#loveHeart").width() / 2;
+    var offsetY = $("#loveHeart").height() / 2 - 55;
+    var together = parseTime("2013-10-01 00:00:00");
+    var typewriterSpeed = 75;
+    var animationInterval = 1000;
+    var heartAnimationSpeed = 50;
+    var wordsInterval = 5000;
+    var signatureInterval = 3000;
+
+    if (!document.createElement('canvas').getContext) {
+        var msg = document.createElement("div");
+        msg.id = "errorMsg";
+        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        document.body.appendChild(msg);
+        $("#code").css("display", "none");
+        document.execCommand("stop");
+    } else {
+        setTimeout(function () {
+            startHeartAnimation();
+            $("#links").fadeIn(1000);
+        }, animationInterval);
+
+        timeElapse(together);
+        setInterval(function () {
+            timeElapse(together);
+        }, 500);
+        adjustCodePosition();
+        $("#code").typewriter();
+    }
+</script>
