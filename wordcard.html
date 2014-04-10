@@ -49,6 +49,12 @@
         $("#code").css("display", "none");
         document.execCommand("stop");
     } else {
+
+        var screenwidth = screen.width;
+
+        $("#code").css("left", 600*screenwidth/1440);
+        $("#prevpage").css("left", 650*screenwidth/1440);
+        $("#nextpage").css("left", 800*screenwidth/1440);
         $("#code").typewriter();
     }
 
@@ -58,6 +64,9 @@
             window.location.href="loveheart.html";
         } else {
             $("#code").text(words[currentPage]);
+            $("#code").css("left", 600*screenwidth/1440);
+            $("#prevpage").css("left", 650*screenwidth/1440);
+            $("#nextpage").css("left", 800*screenwidth/1440);
             $("#code").typewriter();
         }
     }
@@ -65,6 +74,9 @@
     function prevPage(){
         currentPage--;
         $("#code").text(words[currentPage]);
+        $("#code").css("left", 600*screenwidth/1440);
+        $("#prevpage").css("left", 650*screenwidth/1440);
+        $("#nextpage").css("left", 800*screenwidth/1440);
         $("#code").typewriter();
     }
 </script>
