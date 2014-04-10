@@ -40,6 +40,7 @@
         "丁烨，给我个机会，\n让我们在苏州这个不大不小的\n城市\n经营一份\n属于我们的感情与幸福。"
     ];
     var currentPage = -1;
+    var screenwidth = screen.width;
 
     if (!document.createElement('canvas').getContext) {
         var msg = document.createElement("div");
@@ -49,12 +50,13 @@
         $("#code").css("display", "none");
         document.execCommand("stop");
     } else {
+        if (screenwidth <= 800){
+            alert(screenwidth);
+            $("#code").css("left", "400px");
+            $("#prevpage").css("left", "350px");
+            $("#nextpage").css("left", "500px");
+        }
 
-        var screenwidth = screen.width;
-
-        $("#code").css("left", screenwidth/2-120);
-        $("#prevpage").css("left", screenwidth/2-70);
-        $("#nextpage").css("left", screenwidth/2+80);
         $("#code").typewriter();
     }
 
@@ -64,9 +66,11 @@
             window.location.href="loveheart.html";
         } else {
             $("#code").text(words[currentPage]);
-            $("#code").css("left", screenwidth/2-120);
-            $("#prevpage").css("left", screenwidth/2-70);
-            $("#nextpage").css("left", screenwidth/2+80);
+            if (screenwidth <= 800){
+                $("#code").css("left", "400px");
+                $("#prevpage").css("left", "350px");
+                $("#nextpage").css("left", "500px");
+            }
             $("#code").typewriter();
         }
     }
@@ -74,9 +78,11 @@
     function prevPage(){
         currentPage--;
         $("#code").text(words[currentPage]);
-        $("#code").css("left", screenwidth/2-120);
-        $("#prevpage").css("left", screenwidth/2-70);
-        $("#nextpage").css("left", screenwidth/2+80);
+        if (screenwidth <= 800){
+            $("#code").css("left", "400px");
+            $("#prevpage").css("left", "350px");
+            $("#nextpage").css("left", "500px");
+        }
         $("#code").typewriter();
     }
 </script>
