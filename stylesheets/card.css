@@ -40,3 +40,30 @@ body {
     top: 450px;
     color: red;
 }
+
+@media screen and (max-width: 800px) {
+    #code {
+        position: absolute;
+        width: 200px;
+        height: 100px;
+        left: 400px;
+        top: 270px;
+        color: #333;
+        font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+        font-size: 24px;
+    }
+
+    #prevpage {
+        position: absolute;
+        left: 450px;
+        top: 450px;
+        color: red;
+    }
+
+    #nextpage {
+        position: absolute;
+        left: 600px;
+        top: 450px;
+        color: red;
+    }
+}
