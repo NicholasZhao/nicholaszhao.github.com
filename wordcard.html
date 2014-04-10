@@ -50,8 +50,9 @@
         $("#code").css("display", "none");
         document.execCommand("stop");
     } else {
-        if (screenwidth <= 800){
-            alert(screenwidth);
+        alert(screenwidth);
+        if (screenwidth <= 1200){
+
             $("#code").css("left", "400px");
             $("#prevpage").css("left", "350px");
             $("#nextpage").css("left", "500px");
@@ -66,7 +67,7 @@
             window.location.href="loveheart.html";
         } else {
             $("#code").text(words[currentPage]);
-            if (screenwidth <= 800){
+            if (screenwidth <= 1200){
                 $("#code").css("left", "400px");
                 $("#prevpage").css("left", "350px");
                 $("#nextpage").css("left", "500px");
@@ -78,7 +79,7 @@
     function prevPage(){
         currentPage--;
         $("#code").text(words[currentPage]);
-        if (screenwidth <= 800){
+        if (screenwidth <= 1200){
             $("#code").css("left", "400px");
             $("#prevpage").css("left", "350px");
             $("#nextpage").css("left", "500px");
