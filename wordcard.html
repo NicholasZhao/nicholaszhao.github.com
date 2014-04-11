@@ -50,12 +50,12 @@
         $("#code").css("display", "none");
         document.execCommand("stop");
     } else {
-        alert(screenwidth);
+        //alert(screenwidth);
         if (screenwidth <= 1200){
 
-            $("#code").css("left", "400px");
-            $("#prevpage").css("left", "350px");
-            $("#nextpage").css("left", "500px");
+            $("#code").css("left", "370px");
+            $("#prevpage").css("left", "380px");
+            $("#nextpage").css("left", "530px");
         }
 
         $("#code").typewriter();
@@ -68,9 +68,9 @@
         } else {
             $("#code").text(words[currentPage]);
             if (screenwidth <= 1200){
-                $("#code").css("left", "400px");
-                $("#prevpage").css("left", "350px");
-                $("#nextpage").css("left", "500px");
+                $("#code").css("left", "370px");
+                $("#prevpage").css("left", "380px");
+                $("#nextpage").css("left", "530px");
             }
             $("#code").typewriter();
         }
@@ -80,9 +80,9 @@
         currentPage--;
         $("#code").text(words[currentPage]);
         if (screenwidth <= 1200){
-            $("#code").css("left", "400px");
-            $("#prevpage").css("left", "350px");
-            $("#nextpage").css("left", "500px");
+            $("#code").css("left", "370px");
+            $("#prevpage").css("left", "380px");
+            $("#nextpage").css("left", "530px");
         }
         $("#code").typewriter();
     }
